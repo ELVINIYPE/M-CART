@@ -86,7 +86,7 @@ public class DB1 {
 		frame.getContentPane().add(lblUsername);
 		
 		JLabel lblPassword = new JLabel("PASSWORD");
-		lblPassword.setBounds(97, 116, 67, 14);
+		lblPassword.setBounds(97, 116, 89, 14);
 		frame.getContentPane().add(lblPassword);
 		
 		textFieldUN = new JTextField();

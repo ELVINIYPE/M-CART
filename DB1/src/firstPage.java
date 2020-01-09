@@ -15,7 +15,8 @@ public class firstPage {
 
 	private JFrame frame;
 	private JTextField FPSearch;
-
+	private JTextField FB;
+	
 	/**
 	 * Launch the application.
 	 */
@@ -101,14 +102,35 @@ public class firstPage {
 				objG.main();
 			}
 		});
-		btnNewButton_1.setBounds(422, 548, 89, 23);
+		btnNewButton_1.setBounds(501, 431, 89, 23);
 		frame.getContentPane().add(btnNewButton_1);
-		
+		connectDS databaseConnectFB = new connectDS();
 		JLabel lblNewLabel_3 = new JLabel("");
 		Image imageG = new ImageIcon(this.getClass().getResource("GAMEI.jpg")).getImage();
 		lblNewLabel_3.setIcon(new ImageIcon(imageG));
-		lblNewLabel_3.setBounds(201, 432, 479, 317);
+		lblNewLabel_3.setBounds(267, 293, 479, 317);
 		frame.getContentPane().add(lblNewLabel_3);
+		
+		FB = new JTextField();
+		FB.setBounds(40, 337, 86, 31);
+		frame.getContentPane().add(FB);
+		FB.setColumns(10);
+		
+		JButton btnNewButton_2 = new JButton("feedback");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				String feedback = FB.getText();
+				databaseConnectFB.FB(feedback);
+				FB.setText(" ");
+			
+			
+			
+			
+			
+			}
+		});
+		btnNewButton_2.setBounds(37, 368, 89, 23);
+		frame.getContentPane().add(btnNewButton_2);
 		//connectDS databaseConnect1 = new connectDS();
 		
 		

@@ -112,14 +112,14 @@ public class shirt {
 		txtLevis = new JTextField();
 		txtLevis.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 16));
 		txtLevis.setText("Levis  $50");
-		txtLevis.setBounds(108, 403, 115, 20);
+		txtLevis.setBounds(651, 597, 115, 20);
 		frame.getContentPane().add(txtLevis);
 		txtLevis.setColumns(10);
 		
 		txtPeterEngland = new JTextField();
 		txtPeterEngland.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 17));
 		txtPeterEngland.setText("PETER ENGLAND");
-		txtPeterEngland.setBounds(650, 619, 166, 20);
+		txtPeterEngland.setBounds(85, 404, 166, 20);
 		frame.getContentPane().add(txtPeterEngland);
 		txtPeterEngland.setColumns(10);
 		

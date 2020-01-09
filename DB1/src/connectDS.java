@@ -43,9 +43,7 @@ public class connectDS  {
           		String SQL = "SELECT * FROM employee1";
           		stmt = con.createStatement();
           		rs = stmt.executeQuery(SQL);
-          		/*String SQL1 = "INSERT INTO employee1 VALUES (6566)";
-          		stmt1 = con.createStatement();
-          		rs1 = stmt1.executeQuery(SQL1);*/
+          		
           
           		// Iterate through the data in the result set and display it.
           		while (rs.next()) {
@@ -208,6 +206,37 @@ public class connectDS  {
 		System.out.println(feedback);
 		
 		
+	}
+
+
+	public void FB(String feedback) {
+		// TODO Auto-generated method stub
+		
+		Connection con = null;
+		Statement stmt = null;
+		ResultSet rs = null;
+		try {
+			String connectionUrl = "jdbc:sqlserver://localhost:1433;" +
+					"databaseName=one;integratedSecurity=true;";
+
+      		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+          		con = DriverManager.getConnection(connectionUrl);
+          		String query1 = "INSERT INTO feedback(fb) values (?)";
+          		PreparedStatement pst1 = con.prepareStatement(query1);
+          		pst1.setString(1,feedback);
+          		
+          		pst1.executeUpdate();
+          		
+          		
+      	}catch (Exception e) {
+			e.printStackTrace();
+		}
+
+		finally {
+			if (rs != null) try { rs.close(); } catch(Exception e) {}
+	    		if (stmt != null) try { stmt.close(); } catch(Exception e) {}
+	    		if (con != null) try { con.close(); } catch(Exception e) {}
+		}
 	}
 
 }

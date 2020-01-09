@@ -20,7 +20,7 @@ import javax.swing.Timer;
 public class Gameplay  extends JPanel implements KeyListener, ActionListener  {
 	private boolean play = false;
 	private int score = 0;
-	private int totalBricks =21;
+	private int totalBricks =28;
 	private  Timer timer;
 	private int delay = 5;
 	private int playerX = 310;
@@ -33,7 +33,7 @@ public class Gameplay  extends JPanel implements KeyListener, ActionListener  {
 	
 	
 	public Gameplay() {
-		map = new MapGenerator(3,7);
+		map = new MapGenerator(4,7);
 		addKeyListener(this);
 		setFocusable(true);
 		setFocusTraversalKeysEnabled(false);
@@ -218,6 +218,8 @@ public class Gameplay  extends JPanel implements KeyListener, ActionListener  {
 		// TODO Auto-generated method stub
 		
 	}
+	
+	
 
 	
 	

@@ -244,6 +244,8 @@ public class shoes {
 			public void actionPerformed(ActionEvent arg0) {
 				if(tglbtnNewToggleButton.isSelected()) {
 					JOptionPane.showMessageDialog(null, "JUST ENJOY FOR $10");
+					playstore py = new playstore();
+					py.main();
 				}
 			}
 		});

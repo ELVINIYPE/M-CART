@@ -38,7 +38,7 @@ public class Payment {
 	 */
 	private void initialize() {
 		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
+		frame.setBounds(100, 100, 681, 597);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
@@ -68,7 +68,7 @@ public class Payment {
 				}
 			}
 		));
-		tree.setBounds(61, 37, 128, 159);
+		tree.setBounds(61, 37, 199, 328);
 		frame.getContentPane().add(tree);
 	}
 }
